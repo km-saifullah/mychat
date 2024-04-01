@@ -126,7 +126,6 @@ const Sidebar = () => {
         <Box sx={style}>
           <h2>Upload Profile Photo</h2>
           <div className="img_holder">
-            {/* <Image source={data && data.photoURL} alt="img" /> */}
             {image ? (
               <div className='img-preview'></div>
             ) : 
@@ -158,7 +157,7 @@ const Sidebar = () => {
                   background={false}
                   responsive={true}
                   autoCropArea={1}
-                  checkOrientation={false} // https://github.com/fengyuanchen/cropperjs/issues/671
+                  checkOrientation={false} 
                   onInitialized={(instance) => {
                     setCropper(instance);
                   }}
@@ -195,7 +194,6 @@ const Sidebar = () => {
                 :
                 <Image source="assets/images/profile_avatar.png" style='profile_img'/>
                 }
-            {/* <Image source={auth.currentUser && auth.currentUser.photoURL} alt="img" /> */}
             <div onClick={handleOpen} className="overlay">
               <FaCloudUploadAlt />
             </div>
